@@ -61,10 +61,10 @@ ASmartActivity* AAIGuyCharacter::SelectNextActivity(bool bDebugOn)
 	TArray<TPair<ASmartActivity*, float>> ActivityScores;
 
 	/*
-		*IMPORTANT: This O(n^3) + early exit solution may look bad, and could be reduced to O(n^2) by using an unordered map
-		*to query the needs faster, but with an increase in space complexity.
-		*Currently though given that the character needs won't probably surpass a number bigger than 100 we can stick
-		*with this approach and refactor later if need be.
+	*IMPORTANT: This O(n^3) + early exit solution may look bad, and could be reduced to O(n^2) by using an unordered map
+	*to query the needs faster, but with an increase in space complexity.
+	*Currently though given that the character needs won't probably surpass a number bigger than 100 we can stick
+	*with this approach and refactor later if need be.
 	*/
 	for(const auto& Activity : SmartActivities)
 	{
