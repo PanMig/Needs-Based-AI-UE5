@@ -109,7 +109,7 @@ void AAIGuyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-    NeedsDecay(DeltaTime);
+	NeedsDecay(DeltaTime);
 
 	CurrentState->UpdateState(this, DeltaTime);
 }
@@ -142,15 +142,15 @@ void AAIGuyCharacter::RegisterActivityCompletionDelegateHelper()
 void AAIGuyCharacter::ChangeState(FAIStateBase* NewState)
 {
 	// Cleanup the current state
-    if (CurrentState)
-    {
-        CurrentState->ExitState(this);
-        delete CurrentState;
-    }
-    // Assign the new state
-    CurrentState = NewState;
-    // Enter the new state
-    CurrentState->EnterState(this);
+	if (CurrentState)
+	{
+	    CurrentState->ExitState(this);
+	    delete CurrentState;
+	}
+	// Assign the new state
+	CurrentState = NewState;
+	// Enter the new state
+	CurrentState->EnterState(this);
 }
 
 void AAIGuyCharacter::ClearActivity()
@@ -182,7 +182,7 @@ void AAIGuyCharacter::ReceiveActivityReward(const TArray<FNeedAdvertisement>& Ne
 			ChainedActivity->LockActivity();
 		}
 	}
-	
+
 	ChangeState(new FIdleState(FCharacterStateNames::Idle));
 }
 
