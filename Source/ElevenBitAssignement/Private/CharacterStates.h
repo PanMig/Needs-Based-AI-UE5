@@ -20,15 +20,16 @@ class FAIStateBase
 {
 public:
 	FAIStateBase(const FName Name) : StateName(Name){}
-    virtual ~FAIStateBase() {} 
-    virtual void EnterState(AAIGuyCharacter* Owner) {}
-    virtual void UpdateState(AAIGuyCharacter* Owner, float DeltaTime) {}
-    virtual void ExitState(AAIGuyCharacter* Owner) {}
+	virtual ~FAIStateBase() {} 
+	virtual void EnterState(AAIGuyCharacter* Owner) {}
+	virtual void UpdateState(AAIGuyCharacter* Owner, float DeltaTime) {}
+	virtual void ExitState(AAIGuyCharacter* Owner) {}
 
 	virtual FName GetStateName()
 	{
 		return StateName;
 	}
+
 protected:
 	FName StateName;
 };
@@ -68,7 +69,6 @@ public:
  */
 class FPerformingActivityState : public FAIStateBase
 {
-
 public:
 	FPerformingActivityState(const FName Name) : FAIStateBase(Name){}
 	virtual void EnterState(AAIGuyCharacter* Owner) override

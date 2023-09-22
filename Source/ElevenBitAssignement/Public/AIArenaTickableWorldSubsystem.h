@@ -16,10 +16,10 @@ class ELEVENBITASSIGNEMENT_API UAIArenaTickableWorldSubsystem : public UTickable
 
 public:
 	UAIArenaTickableWorldSubsystem();
-    virtual void Initialize(FSubsystemCollectionBase& Collection) override;
-    virtual void Deinitialize() override;
+	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
+	virtual void Deinitialize() override;
 	virtual TStatId GetStatId() const override { return TStatId(); }
-    virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float DeltaTime) override;
 	virtual void OnWorldBeginPlay(UWorld& InWorld) override;
 
 	bool FindAvailableActivityWithID(const FName& ID, ASmartActivity*& FoundActivity);

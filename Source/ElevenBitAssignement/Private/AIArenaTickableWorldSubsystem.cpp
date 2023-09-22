@@ -57,18 +57,18 @@ void UAIArenaTickableWorldSubsystem::OnWorldBeginPlay(UWorld& InWorld)
 
 bool UAIArenaTickableWorldSubsystem::FindAvailableActivityWithID(const FName& ID, ASmartActivity*& FoundActivity)
 {
-    for (const auto& Activity : SmartActivities)
-    {
-        if (Activity->bIsAvailable && Activity->UniqueIdentifier == ID)
-        {
-            FoundActivity = Activity;
-            return true;
-        }
-    }
+	for (const auto& Activity : SmartActivities)
+	{
+	    if (Activity->bIsAvailable && Activity->UniqueIdentifier == ID)
+	    {
+	        FoundActivity = Activity;
+	        return true;
+	    }
+	}
 
-    // No matching activity was found, set FoundActivity to nullptr to indicate failure.
-    FoundActivity = nullptr;
-    return false;
+	// No matching activity was found, set FoundActivity to nullptr to indicate failure.
+	FoundActivity = nullptr;
+	return false;
 }
 
 TArray<ASmartActivity*> UAIArenaTickableWorldSubsystem::GetAvailableSmartActivities()
