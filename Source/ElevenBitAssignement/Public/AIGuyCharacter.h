@@ -26,7 +26,7 @@ public:
 	//We will require many times to iterate through the needs and advertisements arrays, so let's generalize it
 	void IterateAdvertisements(const TArray<FNeedAdvertisement>& Advertisements, TFunction<void(FCharacterNeed&, const FNeedAdvertisement& Advertisement)> Lambda);
 
-    //Helpers
+	//Helpers
 	FVector GetNavigationPoint() const { return NavigationPoint; }
 	void SetNavigationPoint(const FVector& NewPoint) { NavigationPoint = NewPoint; }
 	void RegisterActivityCompletionDelegateHelper();

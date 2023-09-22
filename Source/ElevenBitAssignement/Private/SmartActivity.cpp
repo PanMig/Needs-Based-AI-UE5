@@ -22,11 +22,11 @@ ASmartActivity::ASmartActivity()
 	ActivitySpot->SetupAttachment(StaticMeshComponent);
 
 	// Calculate the desired relative transform for ActivitySpot
-    const FRotator Rotation = FRotator(0.0f, 0.0f, 0.0f); // You can change the rotation if needed
-    const FTransform RelativeTransform = FTransform(Rotation, FVector(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f));
+	const FRotator Rotation = FRotator(0.0f, 0.0f, 0.0f); // You can change the rotation if needed
+	const FTransform RelativeTransform = FTransform(Rotation, FVector(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f));
 
-    // Apply the relative transform to ActivitySpot
-    ActivitySpot->SetRelativeTransform(RelativeTransform);
+	// Apply the relative transform to ActivitySpot
+	ActivitySpot->SetRelativeTransform(RelativeTransform);
 }
 
 // Called when the game starts or when spawned

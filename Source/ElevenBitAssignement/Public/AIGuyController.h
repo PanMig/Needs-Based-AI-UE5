@@ -12,11 +12,11 @@ class ELEVENBITASSIGNEMENT_API AAIGuyController : public AAIController
 	GENERATED_BODY()
 
 public:
-    virtual void BeginPlay() override;
+	virtual void BeginPlay() override;
 
-    UFUNCTION()
-    void HandleOnMoveCompleted(FAIRequestID RequestID, EPathFollowingResult::Type Result);
+	UFUNCTION()
+	void HandleOnMoveCompleted(FAIRequestID RequestID, EPathFollowingResult::Type Result);
 
 private:
-    FAIMoveCompletedSignature OnMoveCompleted;
+	FAIMoveCompletedSignature OnMoveCompleted;
 };

@@ -42,6 +42,7 @@ public:
 	UPROPERTY(EditAnywhere) // this is probably bad, given we allow everyone to change it, but comes in handy for the designers to prototype
 	bool bIsAvailable = true;
 
+	//Core class members
 	UPROPERTY(EditAnywhere)
 	float CompletionTime = 2.0f;
 	UPROPERTY(EditAnywhere)
@@ -51,6 +52,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	TArray<ASmartActivity*> ChainedActivities;
 
+	//Data asset and runtime list of advertisement for easier operations
 	UPROPERTY(EditAnywhere)
 	UActivityAdvertisements* AdvertisementsDataAsset;
 	UPROPERTY(EditAnywhere)
