@@ -8,7 +8,7 @@ void FIdleState::UpdateState(AAIGuyCharacter* Owner, float DeltaTime)
 	// Try performing queued activities
 	if (!Owner->Activities.IsEmpty())
 	{
-	    Owner->Activities.Dequeue(Owner->SelectedActivity);
+		Owner->Activities.Dequeue(Owner->SelectedActivity);
 		check(Owner->SelectedActivity)
 		Owner->SetNavigationPoint(Owner->SelectedActivity->GetActivitySpot());
 		Owner->ChangeState(new FMovingToActivityState(FCharacterStateNames::MovingToActivity));
