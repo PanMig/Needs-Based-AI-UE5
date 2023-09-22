@@ -16,13 +16,13 @@ void FIdleState::UpdateState(AAIGuyCharacter* Owner, float DeltaTime)
 	else
 	{
 		//Find our next activity and lock it temporarily
-	    ASmartActivity* NextActivity = Owner->SelectNextActivity(true);
+		ASmartActivity* NextActivity = Owner->SelectNextActivity(true);
 		if(!NextActivity)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("No activity found"));
 			return;
 		}
-	    Owner->Activities.Enqueue(NextActivity);
+		Owner->Activities.Enqueue(NextActivity);
 		NextActivity->LockActivity();
 	}
 }
